@@ -1,0 +1,34 @@
+{
+  "author": "Marcel Timmerman",
+  "history": [
+    "Paweł Pabian worked on it from 2011 until January 2015",
+    "Marcel Timmerman took over in Januari 2015 and is working on it until the present day"
+  ],
+  "depends": [
+    "BSON",
+    "Digest::MD5"
+  ],
+  "description": "MongoDB driver",
+  "license": "The Artistic License 2.0",
+  "name": "MongoDB",
+  "provides": {
+    "MongoDB::AdminDB":                 "lib/MongoDB/AdminDB.pm6",
+    "MongoDB::Authenticate":            "lib/MongoDB/Authenticate.pm6",
+    "MongoDB::Client":                  "lib/MongoDB/Client.pm6",
+    "MongoDB::ClientIF":                "lib/MongoDB/ClientIF.pm6",
+    "MongoDB::Collection":              "lib/MongoDB/Collection.pm6",
+    "MongoDB::CollectionIF":            "lib/MongoDB/CollectionIF.pm6",
+    "MongoDB::CommandCll":              "lib/MongoDB/CommandCll.pm6",
+    "MongoDB::Cursor":                  "lib/MongoDB/Cursor.pm6",
+    "MongoDB::Database":                "lib/MongoDB/Database.pm6",
+    "MongoDB::DatabaseIF":              "lib/MongoDB/DatabaseIF.pm6",
+    "MongoDB::Header":                  "lib/MongoDB/Header.pm6",
+    "MongoDB::Server":                  "lib/MongoDB/Server.pm6",
+    "MongoDB::Socket":                  "lib/MongoDB/Socket.pm6",
+    "MongoDB::Users":                   "lib/MongoDB/Users.pm6",
+    "MongoDB::Wire":                    "lib/MongoDB/Wire.pm6",
+    "MongoDB":                          "lib/MongoDB.pm6"
+  },
+  "source-url": "git://github.com/MARTIMM/mongo-perl6-driver.git",
+  "version": "0.26.6"
+}

@@ -1,0 +1,13 @@
+{
+    "perl"         : "6.c",
+    "name"         : "WWW::Google::Time",
+    "version"      : "1.001001",
+    "description"  : "Get time for various locations using Google",
+    "depends"      : [ "HTTP::Tinyish", "URI::Escape" ],
+    "test-depends" : [ "Test" ],
+    "provides"     : {
+        "WWW::Google::Time" : "lib/WWW/Google/Time.pm6"
+    },
+    "authors"      : ["Zoffix Znet"],
+    "support"      : {"source"   : "git://github.com/zoffixznet/perl6-WWW-Google-Time.git"}
+}

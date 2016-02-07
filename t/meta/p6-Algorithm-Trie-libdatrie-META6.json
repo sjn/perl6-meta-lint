@@ -1,0 +1,27 @@
+{
+  "perl" : "v6",
+  "name" : "Algorithm::Trie::libdatrie",
+  "description" : "a character keyed trie using the datrie library.",
+  "version" : "0.2",
+  "source-url" : "git://github.com/zengargoyle/p6-Algorithm-Trie-libdatrie.git",
+  "provides" : {
+    "Algorithm::Trie::libdatrie" : "lib/Algorithm/Trie/libdatrie.pm6"
+  },
+  "build-depends" : [
+    "panda",
+    "LibraryMake",
+    "Shell::Command"
+  ],
+  "depends" : [
+    "LibraryMake"
+  ],
+  "test-depends" : [
+    "Test",
+    "File::Temp"
+  ],
+  "resources" : [ "lib/libdatrie.so" ],
+  "authors" : [
+    "zengargoyle"
+  ],
+  "auth" : "github:zengargoyle"
+}

@@ -1,0 +1,31 @@
+{
+  "name" : "Audio::Encode::LameMP3",
+  "tags" : [ "audio", "codec", "encode", "mpeg", "mp3" ],
+  "authors" : [ "Jonathan Stowe <jns+git@gellyfish.co.uk>" ],
+  "author" : "Jonathan Stowe <jns+git@gellyfish.co.uk>",
+  "auth" : "github:jonathanstowe",
+  "support" : {
+    "source" : "git://github.com/jonathanstowe/Audio-Encode-LameMP3.git"
+  },
+  "source-url" : "git://github.com/jonathanstowe/Audio-Encode-LameMP3.git",
+  "perl" : "6.c",
+  "build-depends" : [
+    "panda",
+    "LibraryCheck",
+    "AccessorFacade"
+  ],
+  "provides" : {
+     "Audio::Encode::LameMP3" : "lib/Audio/Encode/LameMP3.pm"
+  },
+  "depends" : [
+    "AccessorFacade",
+    "NativeHelpers::Array"
+  ],
+  "test-depends" : [
+    "Test::META",
+    "Audio::Taglib::Simple",
+    "Audio::Sndfile"
+  ],
+  "description" : "Encode PCM Audio data to MP3 in Perl 6 using a binding to liblame",
+  "version" : "0.0.8"
+}

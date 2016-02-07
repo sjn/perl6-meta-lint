@@ -1,0 +1,16 @@
+{
+  "name" : "IO::Blob",
+  "source-url" : "git://github.com/moznion/p6-IO-Blob.git",
+  "perl" : "6",
+  "build-depends" : [ ],
+  "provides" : {
+    "IO::Blob" : "lib/IO/Blob.pm6"
+  },
+  "depends" : [ ],
+  "description" : "IO:: interface for reading/writing a Blob",
+  "test-depends" : [ ],
+  "version" : "*",
+  "authors" : [
+    "moznion"
+  ]
+}

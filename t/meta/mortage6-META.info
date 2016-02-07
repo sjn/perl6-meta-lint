@@ -1,0 +1,11 @@
+{
+    "name"        : "Mortgage",
+    "version"     : "*",
+    "author"	  : "github:teodozjan",
+    "description" : "Mortgage calculation library",
+    "depends"     : [ ],
+    "provides"    : {
+	        "Mortgage" : "lib/Mortgage.pm6"
+	 },
+    "source-url"  : "git://github.com/teodozjan/mortage6.git"
+}

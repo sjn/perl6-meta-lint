@@ -1,0 +1,10 @@
+{
+    "name" : "Games::BubbleBreaker",
+    "version" : "*",
+    "description" : "A mouse based logic game",
+    "provides" : {
+        "Games::BubbleBreaker" : "lib/Games/BubbleBreaker.pm6"
+    },
+    "depends" : [ "SDL" ],
+    "source-url" : "git://github.com/FROGGS/p6-Games-BubbleBreaker.git"
+}
