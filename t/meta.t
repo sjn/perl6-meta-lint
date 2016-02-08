@@ -14,30 +14,39 @@ subtest {
 }, "META::Lint::Actions loads";
 
 subtest {
-    my $linter = lint 'Broken stuff';
-    is $linter, False, 'Linter returns False for broken JSON';
+    my $result = lint 'Obviously broken stuff';
+    nok $result, 'Linter returns False for broken JSON';
 
-    $linter = lint '{}';
-    is $linter, True, 'Linter returns True for {}';
+    $result = lint '{}';
+    ok $result, 'Linter returns True for {}';
 
-    $linter = lint '[]';
-    is $linter, True, 'Linter returns True for []';
+    $result = lint '[]';
+    ok $result, 'Linter returns True for []';
 
-    $linter = lint '42';
-    is $linter, True, 'Linter returns True for 42';
+    $result = lint '42';
+    ok $result, 'Linter returns True for 42';
 
-    $linter = lint 'true';
-    is $linter, True, 'Linter returns True for true';
+    $result = lint 'true';
+    ok $result, 'Linter returns True for true';
 
-    $linter = lint 'false';
-    is $linter, True, 'Linter returns True for false';
+    $result = lint 'false';
+    ok $result, 'Linter returns True for false';
 
-    $linter = lint 'null';
-    is $linter, True, 'Linter returns True for null';
+    $result = lint 'null';
+    ok $result, 'Linter returns True for null';
 
-    $linter = lint '{ "key" : "value" }';
-    is $linter, True, 'Linter returns True for a k/v pair';
+    $result = lint '{ "key" : "value" }';
+    ok $result, 'Linter returns True for a k/v pair';
+
 }, "Parse supplied minimal JSON";
+
+subtest {
+    my $result = lint 't/meta/json-META.info'.IO;
+    ok $result, 'Linter accepts moritz/json/META.info';
+
+    note $result.perl;
+
+}, "Parse JSON files";
 
 done-testing;
 
