@@ -1,9 +1,19 @@
-#!/usr/bin/env perl6
-
+unit module META::Lint;
 use v6;
-use JSON::Tiny::Grammmar;
 
-class META::Lint is JSON::Tiny::Grammar {
+use META::Lint::Grammar;
+use META::Lint::Actions;
 
+proto lint ($) is export returns Bool { * };
 
+multi lint (IO $file) {
+    ...
 }
+
+multi lint (Str:D $json) {
+    my $a = META::Lint::Actions.new;
+    my $result = META::Lint::Grammar.parse( $json, :actions($a));
+    $result.Bool;
+}
+
+# vim: ft=perl6
