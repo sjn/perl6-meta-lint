@@ -41,10 +41,8 @@ subtest {
 }, "Parse supplied minimal JSON";
 
 subtest {
-    my $result = lint 't/meta/json-META.info'.IO;
+    my $result = lint 't/meta/json-META.info'.IO.slurp;
     ok $result, 'Linter accepts moritz/json/META.info';
-
-    note $result.perl;
 
 }, "Parse JSON files";
 
