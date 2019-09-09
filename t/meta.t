@@ -44,6 +44,7 @@ subtest {
     my $result = lint 't/meta/json-META.info'.IO.slurp;
     ok $result, 'Linter accepts moritz/json/META.info';
 
+    note $result.gist;
 }, "Parse JSON files";
 
 done-testing;
